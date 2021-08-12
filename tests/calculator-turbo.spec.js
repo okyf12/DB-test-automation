@@ -7,7 +7,6 @@ const buildOptions = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 buildOptions.forEach(buildOption => {
     test.describe(`Basic Calculator test suite. Build: ${buildOption}`, () => {
 
-        // const buildOption = '9';
         let page;
         test.beforeAll(async ({ browser }) => {
             page = await browser.newPage();

@@ -1,9 +1,9 @@
 const { test, expect } = require('@playwright/test');
 const { BasicCalculatorPage } = require('../pages/basicCalculatorPage');
+const buildOption = '0';
 
 test.describe('Basic Calculator test suite.', () => {
-    
-    const buildOption = '0';
+
     let page;
     test.beforeAll(async ({ browser }) => {
         page = await browser.newPage();
@@ -15,7 +15,7 @@ test.describe('Basic Calculator test suite.', () => {
 
     // Build 1
     test.only('Test error message when letters in input fields are entered', async () => {
-        await startPage.fillInputsInChoosenCalcBuild(buildOption, 'abc', 'def','0');
+        await startPage.fillInputsInChoosenCalcBuild(buildOption, 'abc', 'def', '0');
         console.log(calculatorOperations);
         const isErrorVisible = await page.isVisible('#errorMsgField');
         expect(isErrorVisible).toBe(true);
@@ -65,7 +65,7 @@ test.describe('Basic Calculator test suite.', () => {
     });
     test('Test errro message for division by 0', async () => {
         await startPage.fillInputsInChoosenCalcBuild(buildOption, '5', '0', '3');
-        const errorMessage = await page.textContent('#errorMsgField',{timeout:100});
+        const errorMessage = await page.textContent('#errorMsgField', { timeout: 100 });
         expect(errorMessage).toContain('Divide by zero error!');
     });
     // Additional tests
