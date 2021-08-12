@@ -1,0 +1,26 @@
+{
+  "name": "DB-test-automation",
+  "version": "1.0.0",
+  "description": "Test Automation homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okyf12/DB-test-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okyf12/DB-test-automation/issues"
+  },
+  "homepage": "https://github.com/okyf12/DB-test-automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.13.1"
+  },
+  "dependencies": {
+    "experimental-allure-playwright": "0.0.3"
+  }
+}
